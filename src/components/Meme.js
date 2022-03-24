@@ -52,8 +52,7 @@ export default function Meme(){
                      </div>
                      <div className="w-100"></div>
                      <div className="container btn--container ">
-                            <div className="row">
-                                  
+                            <div className="row align-items-center justify-content-center">
                                           <button 
                                                  type='submit' 
                                                  id="button--meme" 

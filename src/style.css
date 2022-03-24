@@ -92,9 +92,14 @@ body{
       }
        .nav{
               display: flex;
-              height: 30% !important;
+              height: 15vw !important;
        }
-       
+       #meme--container{
+              margin-top: 1em !important;
+       }
+       #button--meme{
+              width: 50vw !important;
+       }
        
 }
 .btn--container{
