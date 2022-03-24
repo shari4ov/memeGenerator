@@ -1,4 +1,5 @@
 import React from "react";
+import {BsDownload} from "react-icons/bs"
 export default function Meme(){
        const [meme,setMeme] = React.useState({
               topText: "",
@@ -33,7 +34,6 @@ export default function Meme(){
               <div className="container mt-5 align-items-center" id="meme--container">
                      <div className="row">
                             <div className="d-flex input--container align-items-center justify-content-center">
-                                   
                                           <input 
                                           type='text' 
                                           className="input form-control  m-2" 
@@ -48,8 +48,8 @@ export default function Meme(){
                                           name='bottomText' 
                                           value={meme.bottomText} 
                                           onChange={handleChange}/>
-                            </div>
-                     </div>
+                            </div> {/* input--container */}
+                     </div> {/* row */}
                      <div className="w-100"></div>
                      <div className="container btn--container ">
                             <div className="row align-items-center justify-content-center">
@@ -60,15 +60,21 @@ export default function Meme(){
                                                  onClick={getMemeImage} >
                                                  Get a new meme image⛺
                                           </button>
-                                 
-                            </div>
-                     </div>
-                   
+                            </div> {/* row */}
+                     </div>{/* btn--container */}
                      <div className="container meme text-center">
                                    <img  src={meme.randomImage} className="meme--image rounded max-auto img-fluid" alt="meme image"/>
                                    <h2 className="meme--text top">{meme.topText}</h2>
                                    <h2 className="meme--text bottom">{meme.bottomText}</h2> 
-                     </div>
-              </div>
+                     </div> {/* meme */}
+                     <div className="d-flex justify-content-center align-items-center">
+                                          <a href={meme.randomImage}
+                                                 download
+                                                 className="btn btn-success mt-3"
+                                                 >
+                                          <BsDownload className="icon--btn"/>
+                                                 Download </a>
+                     </div> {/* download--btn */}
+              </div> /* meme--container */
        )
 }
