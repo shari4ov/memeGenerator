@@ -84,7 +84,7 @@ body{
 }
 @media (max-width:760px){
       .meme--text{
-             font-size: .5em;
+             font-size: 1rem;
       }
       .input--container{
              display: flex;
@@ -92,15 +92,23 @@ body{
       }
        .nav{
               display: flex;
-              height: 15vw !important;
+              height: 14vw !important;
        }
        #meme--container{
               margin-top: 1em !important;
        }
        #button--meme{
-              width: 100% !important;
+              max-width: 100% !important;
        }
-       
+       html,body{
+              max-width: 100%;
+       }
+}
+@media (max-width:340px){
+       .nav{
+              
+              height: 19vw !important;
+       }
 }
 .btn--container{
        max-width: 480px;
